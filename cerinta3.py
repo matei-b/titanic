@@ -11,7 +11,7 @@ def cerinta3(df):
 	data_fare = df['Fare']
 
 	plt.hist(data_survived, bins=10, color='skyblue', edgecolor='black')
-	plt.xlabel('Class')
+	plt.xlabel('Survivors')
 	plt.ylabel('Number of passengers')
 	plt.title('Histogram of Survivors')
 	plt.savefig("survivors.png")
