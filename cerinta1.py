@@ -1,7 +1,6 @@
 import pandas as pd
 
-def cerinta1():
-	df = pd.read_csv('./titanic/train.csv', index_col=0)
+def cerinta1(df):
 	print(f"The number of columns is: {len(df.columns)}")
 	print(f"The number of rows is: {len(df)}")
 	print("The data types of the columns are:")
@@ -10,5 +9,3 @@ def cerinta1():
 	print(df.isnull().sum())
 	print(f"The number of duplicated rows is: {df.duplicated().sum()}")
 pass
-
-cerinta1()
