@@ -3,11 +3,19 @@ import matplotlib.pyplot as plt
 import numpy as np
  
 def cerinta3(df):
+	data_survived = df['Survived']
 	data_pclass = df['Pclass']
 	data_age = df['Age']
 	data_sibsp = df['SibSp']
 	data_parch = df['Parch']
 	data_fare = df['Fare']
+
+	plt.hist(data_survived, bins=10, color='skyblue', edgecolor='black')
+	plt.xlabel('Class')
+	plt.ylabel('Number of passengers')
+	plt.title('Histogram of Survivors')
+	plt.savefig("survivors.png")
+	plt.close()
 
 	plt.hist(data_pclass, bins=10, color='skyblue', edgecolor='black')
 	plt.xlabel('Class')
