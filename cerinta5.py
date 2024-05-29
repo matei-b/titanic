@@ -5,13 +5,13 @@ import seaborn
 
 def age_group(age):
 	if age < 21:
-		return '0 - 20'
+		return 'Under 20'
 	elif (20 < age) & (age < 41):
 		return '21 - 40'
 	elif (40 < age) & (age < 61):
 		return '41 - 60'
 	elif 60 < age:
-		return '61 - max'
+		return '60+'
 
 def cerinta5(df):
 	no_20 = len(df[(df['Age'] < 21)])
@@ -21,10 +21,10 @@ def cerinta5(df):
 	df_aux = df
 	df_aux['Age Group'] = df_aux['Age'].apply(age_group)
 	data = [no_20, no_40, no_60, no_max]
-	keys = ['0 - 20', '21 - 40', '41 - 60', '61 - max']
+	keys = ['Under 20', '21 - 40', '41 - 60', '60+']
 	palette_color = seaborn.color_palette('bright') 
 	plt.pie(data, labels=keys, colors=palette_color, autopct='%.2f%%') 
-	plt.savefig("ages_g.png")
+	plt.savefig('ages_g.png')
 	plt.close()
 	print(df)
 pass
