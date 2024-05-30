@@ -51,4 +51,5 @@ def cerinta9(df):
 	plt.xticks(rotation = 90)
 	plt.ylabel("Number of passengers")
 	plt.savefig('bar_3.png')
+	plt.close()
 pass

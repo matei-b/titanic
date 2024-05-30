@@ -10,6 +10,7 @@ def no_and_perc(df):
 	return NaN_columns, percentages, no_NaN_values 
 
 def cerinta4(df):
+	print("****Cerinta IV****")
 	NaN_columns, percentages, no_NaN_values = no_and_perc(df)
 	NaN_columns.tolist()
 	print("These are the columns containing null values and their number: ")
@@ -34,5 +35,6 @@ def cerinta4(df):
 	print("Percentages for the perished:")
 	for i in NaN_columns:
 		print(f"{i}: {percentages[i]:.2f}%")
-
+	print("***************")
+	print("")
 pass

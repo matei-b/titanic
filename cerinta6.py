@@ -4,6 +4,7 @@ import numpy as np
 import seaborn
 
 def cerinta6(df):
+	print("****Cerinta VI****")
 	no_20_s = len(df[(df['Age'] < 21) & (df['Survived'] == 1) & (df['Sex'] == 'male')])
 	no_40_s = len(df[(20 < df['Age']) & (df['Age'] < 41) & (df['Survived'] == 1) & (df['Sex'] == 'male')])
 	no_60_s = len(df[(40 < df['Age']) & (df['Age'] < 61) & (df['Survived'] == 1) & (df['Sex'] == 'male')])
@@ -24,4 +25,7 @@ def cerinta6(df):
 	plt.ylabel("Survival Rate")
 	plt.title("Survival rate among different age groups for males")
 	plt.savefig('bar.png')
+	plt.close()
+	print("***************")
+	print("")
 pass

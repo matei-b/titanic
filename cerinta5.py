@@ -14,6 +14,7 @@ def age_group(age):
 		return '60+'
 
 def cerinta5(df):
+	print("****Cerinta V****")
 	no_20 = len(df[(df['Age'] < 21)])
 	no_40 = len(df[(20 < df['Age']) & (df['Age'] < 41)])
 	no_60 = len(df[(40 < df['Age']) & (df['Age'] < 61)])
@@ -27,4 +28,6 @@ def cerinta5(df):
 	plt.savefig("ages_g.png")
 	plt.close()
 	print(df)
+	print("***************")
+	print("")
 pass

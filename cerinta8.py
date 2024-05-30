@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn
+import warnings
 
 def cerinta8(df):
 	df_s = df[df['Survived'] == 1]
