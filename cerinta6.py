@@ -9,6 +9,10 @@ def cerinta6(df):
 	no_60_s = len(df[(40 < df['Age']) & (df['Age'] < 61) & (df['Survived'] == 1) & (df['Sex'] == 'male')])
 	no_max_s = len(df[(60 < df['Age']) & (df['Survived'] == 1) & (df['Sex'] == 'male')])
 	no_males = len(df[(df['Sex'] == 'male')])
+	print(f"Under 20: {no_20_s} survived, {len(df) - no_20_s} dead")
+	print(f"21 - 40: {no_40_s} survived, {len(df) - no_40_s} dead")
+	print(f"41 - 60: {no_60_s} survived, {len(df) - no_60_s} dead")
+	print(f"60+: {no_max_s} survived, {len(df) - no_max_s} dead")
 	p_20 = (no_20_s / no_males) * 100
 	p_40 = (no_40_s / no_males) * 100
 	p_60 = (no_60_s / no_males) * 100
