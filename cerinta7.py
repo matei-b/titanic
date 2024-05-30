@@ -7,7 +7,7 @@ def cerinta7(df):
 	no_passengers = len(df)
 	no_u18 = len(df[(df['Age'] < 18)])
 	no_u18_s = len(df[(df['Age'] < 18) & (df['Survived'] == 1)])
-	no_o18_s = len(df[(df['Age'] > 18) & (df['Survived'] == 1)])
+	no_o18_s = len(df[(df['Age'] >= 18) & (df['Survived'] == 1)])
 	p_u18 = (no_u18 / no_passengers) * 100
 	p_u18_s = (no_u18_s / no_passengers) * 100
 	p_o18_s = (no_o18_s / no_passengers) * 100
